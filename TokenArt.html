@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TokenArt Airdrop - $TART</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(blue, black);
+            color: white;
+            text-align: center;
+        }
+
+        .container {
+            padding: 20px;
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: rgba(0, 0, 0, 0.8);
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            color: #ccc;
+        }
+
+        .balance, .tasks, .referral, .deposit {
+            margin-top: 20px;
+        }
+
+        .tasks .task-links a {
+            margin: 10px;
+            display: inline-block;
+        }
+
+        .tasks img {
+            width: 48px;
+            height: 48px;
+            transition: transform 0.2s;
+        }
+
+        .tasks img:hover {
+            transform: scale(1.1);
+        }
+
+        .referral input {
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        .deposit form {
+            margin-top: 10px;
+        }
+
+        .deposit input {
+            width: calc(100% - 110px);
+            padding: 10px;
+            margin-right: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        .deposit button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: #007bff;
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .deposit button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+    <script>
+        function handleSubmit(event) {
+            event.preventDefault(); // Prevent the page from refreshing
+            const solanaAddress = document.getElementById("solana-address").value;
+            if (solanaAddress.trim() === "") {
+                alert("Please enter your Solana deposit address.");
+            } else {
+                alert(`Your Solana deposit address is: ${solanaAddress}`);
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>TokenArt Airdrop ($TART)</h1>
+            <p>Powered by AItools on the Solana Blockchain</p>
+        </header>
+
+        <section class="balance">
+            <h2>Your Balance: 20000 $TART</h2>
+        </section>
+
+        <section class="tasks">
+            <h2>Complete the Tasks</h2>
+            <div class="task-links">
+                <a href="https://youtube.com/@aitoolsupdate2025?si=pbFsTkq_U_Yt_BcQ" target="_blank">
+                    <img src="https://img.icons8.com/color/48/000000/youtube-play.png" alt="YouTube">
+                </a>
+                <a href="https://t.me/AItoolsAItools" target="_blank">
+                    <img src="https://img.icons8.com/color/48/000000/telegram-app.png" alt="Telegram">
+                </a>
+                <a href="https://x.com/TokenArt__?t=e_w9D1-yXO-MnmgzE5y51A&s=08" target="_blank">
+                    <img src="https://img.icons8.com/color/48/000000/twitter--v1.png" alt="Twitter">
+                </a>
+                <a href="https://www.tiktok.com/@tokenart3?_t=8sWObnsxbBV&_r=1" target="_blank">
+                    <img src="https://img.icons8.com/color/48/000000/tiktok.png" alt="TikTok">
+                </a>
+            </div>
+        </section>
+
+        <section class="referral">
+            <h2>Referral Link</h2>
+            <input type="text" placeholder="Your Referral Link" readonly>
+        </section>
+
+        <section class="deposit">
+            <h2>Submit Solana Deposit Address</h2>
+            <form onsubmit="handleSubmit(event)">
+                <input type="text" id="solana-address" placeholder="Enter Your Solana Address" required>
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+    </div>
+</body>
+</html>
